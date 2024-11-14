@@ -23,12 +23,13 @@ export interface ChartType {
   datasets: {
     label: string;
     data: number[];
-    backgroundColor: string;
-    borderColor?: string;
-    borderWidth?: number;
+    backgroundColor: string[];
+    borderColor: string[];
+    borderWidth: number;
   }[];
   typechart: "line" | "bar" | "pie" | "doughnut" | "radar" | "polarArea";
   style: string;
+  indexaxiss?: "y" | "x";
   id: string;
 }
 
@@ -43,4 +44,5 @@ export interface ListType {
   list: Listitem[];
   style: string;
   stylelist: string;
+  styletext: string;
 }

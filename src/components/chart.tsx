@@ -28,6 +28,7 @@ Chart.register(
 
 const ChartComponent = ({
   labels,
+  indexaxiss,
   datasets,
   typechart,
   style,
@@ -46,13 +47,18 @@ const ChartComponent = ({
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          indexAxis: indexaxiss,
           plugins: {
             datalabels: {
               display: true,
-              align: "top",
+              align: "center",
+              anchor: "center",
               font: {
                 weight: "bold",
+                size: 20,
               },
+              color: "white",
+              textAlign: "center",
               formatter: (value: number) => value.toLocaleString(),
             },
           },
@@ -63,7 +69,7 @@ const ChartComponent = ({
         myChart.destroy();
       };
     }
-  }, [labels, datasets, typechart, style, id]);
+  }, [labels, datasets, typechart, style, id, indexaxiss]);
 
   return (
     <div className={style}>

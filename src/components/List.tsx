@@ -1,13 +1,13 @@
 import { ListType } from "@/interfaces/Interface.Components";
 import Link from "next/link";
 
-const List = ({ style, list, stylelist }: ListType) => {
+const List = ({ style, list, stylelist, styletext }: ListType) => {
   return (
     <ul className={style}>
       {list.map((item, index) => (
         <li className={stylelist} key={index}>
-          <Link href={`/${item.path}`} className="p-2 ">
-            <p>{item.name}</p>
+          <Link href={`/${item.path}`}>
+            <p className={styletext}>{item.name}</p>
           </Link>
         </li>
       ))}

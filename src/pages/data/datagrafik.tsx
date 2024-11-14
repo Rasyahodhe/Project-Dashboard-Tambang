@@ -21,6 +21,7 @@ export const Chart1: ChartType = {
   typechart: "bar",
   style: "lg:w-full lg:h-50 ",
   id: "",
+  indexaxiss: "y",
 };
 
 export const Chart2: ChartType = {
@@ -37,4 +38,5 @@ export const Chart2: ChartType = {
   typechart: "doughnut",
   style: "lg:w-full lg:h-50 ",
   id: "",
+  indexaxiss: "y",
 };
